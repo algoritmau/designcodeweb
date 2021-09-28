@@ -1,10 +1,11 @@
 import React from 'react'
-import '../../styles/reset.sass'
+import { GlobalStyles } from '@styles/GlobalStyles'
 import './layout.sass'
 
 function Layout({ children }) {
   return (
     <>
+      <GlobalStyles />
       <main>{children}</main>
     </>
   )
