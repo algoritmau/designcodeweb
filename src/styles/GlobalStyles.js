@@ -56,6 +56,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  a {
+    width: fit-content;
+    text-decoration: none;
+  }
+
   body {
     background: ${themes.light.backgroundColor};
   }
