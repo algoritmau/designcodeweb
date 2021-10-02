@@ -4,29 +4,64 @@ import styled from 'styled-components'
 export default function MockupAnimation() {
   return (
     <Wrapper>
-      <div className="mockup1" />
-      <div className="mockup2" />
-      <div className="mockup3" />
-      <div className="mockup4" />
-      <div className="mockup5" />
+      <div className="mockup mockup--1" />
+      <div className="mockup mockup--2" />
+      <div className="mockup mockup--3" />
+      <div className="mockup mockup--4" />
+      <div className="mockup mockup--5" />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   position: relative;
+  perspective: 1000;
 
-  .mockup1,
-  .mockup2,
-  .mockup3,
-  .mockup4,
-  .mockup5 {
+  * {
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  :hover .mockup {
+    transform: rotateY(360deg) rotateX(0deg);
+
+    &.mockup--1 {
+      transform: translate(-32px, -32px);
+    }
+
+    &.mockup--2 {
+      transform: translate(0, -32px);
+    }
+
+    &.mockup--3 {
+      transform: translate(-32px, -32px);
+    }
+
+    &.mockup--4 {
+      transform: translate(-128px, 32px);
+    }
+
+    &.mockup--5 {
+      transform: translate(-96px, 32px);
+    }
+
+    :hover {
+      filter: brightness(160%) saturate(128%);
+    }
+  }
+
+  .mockup--1,
+  .mockup--2,
+  .mockup--3,
+  .mockup--4,
+  .mockup--5 {
     position: absolute;
     backdrop-filter: blur(var(--backdrop-blur));
     border-radius: 16px;
+    transform: rotateY(332deg) rotateX(12deg);
+    transform-origin: bottom left;
   }
 
-  .mockup1 {
+  .mockup--1 {
     top: 0;
     left: 0;
     width: 183px;
@@ -43,7 +78,7 @@ const Wrapper = styled.div`
       inset 0px 0px 0px 0.5px rgb(255 255 255 / 0.2);
   }
 
-  .mockup2 {
+  .mockup--2 {
     top: 0;
     left: 214px;
     width: 183px;
@@ -56,7 +91,7 @@ const Wrapper = styled.div`
       inset 0px 0px 0px 0.5px rgb(255 255 255 / 0.2);
   }
 
-  .mockup3 {
+  .mockup--3 {
     top: 60px;
     left: 37px;
     width: 601px;
@@ -68,7 +103,7 @@ const Wrapper = styled.div`
     border-radius: 8px;
   }
 
-  .mockup4 {
+  .mockup--4 {
     top: 272px;
     left: 194px;
     width: 399px;
@@ -80,7 +115,7 @@ const Wrapper = styled.div`
     border-radius: 8px;
   }
 
-  .mockup5 {
+  .mockup--5 {
     top: 262px;
     left: 616px;
     width: 412px;

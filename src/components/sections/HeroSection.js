@@ -34,6 +34,7 @@ export default function HeroSection() {
 
 const Wrapper = styled.section`
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  padding-left: 24px;
   overflow: hidden;
 `
 
@@ -44,6 +45,7 @@ const ContentWrapper = styled.div`
 
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 40px;
 `
 
 const TextWrapper = styled.div`
