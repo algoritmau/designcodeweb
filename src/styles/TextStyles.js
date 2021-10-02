@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const H1 = styled.h1`
   font-weight: bold;
   font-size: 60px;
+  line-height: 1.1;
 `
 
 export const H2 = styled.h2`

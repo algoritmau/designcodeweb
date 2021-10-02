@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    line-height: 1.2;
   }
 
   /* HTML5 display-role reset for older browsers */
@@ -18,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    line-height: 1;
+    line-height: 1.6;
   }
 
   ol, ul {
@@ -50,6 +51,27 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-y: scroll;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgb(8 8 8 / 1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -63,9 +85,9 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${themes.light.backgroundColor};
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: ${themes.dark.backgroundColor};
+    
+    @media (prefers-color-scheme: dark) {
+      background: ${themes.dark.backgroundColor};
+    }
   }
 `
