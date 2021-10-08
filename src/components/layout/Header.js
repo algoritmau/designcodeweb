@@ -33,6 +33,15 @@ const Header = () => {
           />
         ))}
       </NavWrapper>
+      <HamburgerWrapper>
+        <NavItemButton
+          to=""
+          imgSrc="/images/icons/hamburger.svg"
+          imgAlt="hamburger"
+          title=""
+          onClick={event => handleAccountClick(event)}
+        />
+      </HamburgerWrapper>
       <MenuTooltip isOpen={isOpen} />
     </HeaderWrapper>
   )
@@ -46,6 +55,11 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 450px) {
+    padding: 0 4rem;
+    top: 4rem;
+  }
 `
 
 const NavWrapper = styled.nav`
@@ -53,6 +67,20 @@ const NavWrapper = styled.nav`
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+
+  a {
+    display: none;
+  }
+`
+
+const HamburgerWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export default Header

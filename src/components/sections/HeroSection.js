@@ -17,7 +17,7 @@ export default function HeroSection() {
           <Title>
             Design
             <br />
-            and code React apps
+            and code <span>React</span> apps
           </Title>
           <Description>
             Don't skip design. Learn design and code, by building real apps with
@@ -59,6 +59,15 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 64px;
+
+  @media (max-width: 720px) {
+    grid-template-columns: auto;
+    padding: 160px 40px 240px 40px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 160px 24px 240px 24px;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -86,6 +95,19 @@ const TextWrapper = styled.div`
 
 const Title = styled(H1)`
   color: ${themes.dark.text1};
+  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  span {
+    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 `
 
 const Description = styled(MediumText)``

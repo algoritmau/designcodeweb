@@ -17,6 +17,16 @@ const Wrapper = styled.div`
   position: relative;
   perspective: 1000;
 
+  @media (max-width: 768px) {
+    transform: scale(0.8);
+    transform-origin: left;
+  }
+
+  @media (max-width: 450px) {
+    transform: scale(0.4);
+    transform-origin: left;
+  }
+
   * {
     transition: var(--transition);
   }
@@ -59,6 +69,11 @@ const Wrapper = styled.div`
     border-radius: 16px;
     transform: rotateY(332deg) rotateX(12deg);
     transform-origin: bottom left;
+
+    @media (max-width: 768px) {
+      transform: rotateY(358deg) rotateX(4deg);
+      transform-origin: left;
+    }
   }
 
   .mockup--1 {

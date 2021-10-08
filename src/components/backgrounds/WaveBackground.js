@@ -27,6 +27,10 @@ const Background = styled.div`
 const Wave = styled.img`
   position: absolute;
   z-index: -1;
+
+  @media (min-width: 1440px) {
+    width: 100%;
+  }
 `
 
 export default WaveBackground
